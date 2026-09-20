@@ -1,0 +1,15 @@
+[Unit]
+Description=Kompyuter Do'koni Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+# Loyiha joylashgan papkani ko'rsating (masalan /home/ubuntu/telegram_bot)
+WorkingDirectory=/home/ubuntu/telegram_bot
+ExecStart=/home/ubuntu/telegram_bot/venv/bin/python3 main.py
+Restart=always
+RestartSec=5
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
